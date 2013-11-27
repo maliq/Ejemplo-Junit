@@ -36,6 +36,7 @@ public class UsuarioServiceTest {
 		boolean actual = usuarioService.save(user);
 		assertEquals(false,actual);
 		Mockito.verify(usuarioDao).getUser(user);
+		Mockito.verify(usuarioDao).createUser(user);
 	}
 	
 	@Test

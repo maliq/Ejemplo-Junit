@@ -12,7 +12,7 @@ public class UsuarioService {
 	}
 
 	public boolean save(String user){
-		if(usuarioDao.getUser(user)!=null){
+		if(usuarioDao.getUser(user) == null ){
 			usuarioDao.createUser(user);
 			return true;
 		}else
